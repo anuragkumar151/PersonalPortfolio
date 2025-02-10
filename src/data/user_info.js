@@ -31,7 +31,7 @@ const info = {
 			title: "Ghost Drop",
 			description: " A web-based application for secure, anonymous peer-to-peer file transfers, via browsers without external software",
 			technologies: "Spring Boot, React, MySql",
-			github: "https://github.com/dsbalico/letter-digit-shape-classification",
+			github: "https://github.com/anuragkumar151/GhostDrop-Frontend",
             link: "https://ghost-drop.vercel.app/",
             image: "/GhostDrop.png"
 		},
