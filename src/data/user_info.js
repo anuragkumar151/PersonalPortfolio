@@ -58,33 +58,35 @@ const info = {
 
     ],
 
-    // ============ EXPERIENCE ============
-    experience: [
-        {
-            position: "Software Developer",
-            company: "Capgemini",
-            duration: "Aug 2023 - Present",
-            image: "capgemini.png",
-            descriptions: [
-                "Fixing bugs in Java and PL/SQL components as part of the GE Corp Project.",
-                "Handling operational tasks and ensuring smooth deployment of code.",
-                "Implementing improvements in existing microservice architectures.",
-                "Collaborating with cross-functional teams to optimize system performance."
-            ]
-        },
-        {
-            position: "Software Developer Intern",
-            company: "Capgemini",
-            duration: "Feb 2023 - May 2023 (4 Months)",
-            image: "capgemini.png",
-            descriptions: [
-                "Developed and tested Java Spring Boot applications for various use cases.",
-                "Contributed to the frontend development of web applications using ReactJS.",
-                "Worked closely with senior developers to implement coding best practices."
-            ]
-        }
-    ],
-    
+ // ============ EXPERIENCE ============
+experience: [
+    {
+        position: "Software Developer",
+        company: "Capgemini India Pvt. Ltd.",
+        duration: "Aug 2023 – Present",
+        image: "/capgemini.png",
+        descriptions: [
+            "Analyzed and resolved 20+ critical production issues, ensuring smooth application performance.",
+            "Worked in an Agile environment, collaborating with onshore teams and providing daily updates.",
+            "Optimized PL/SQL procedures, reducing query execution time and enhancing database efficiency.",
+            "Improved batch job performance, reducing processing time by 40% through Java and SQL optimizations.",
+            "Provided production support for 20+ services, ensuring 99.9% uptime and managing deployments.",
+            "Maintained design documentation in Confluence to streamline issue resolution."
+        ]
+    },
+    {
+        position: "Software Developer Intern",
+        company: "Capgemini India Pvt. Ltd.",
+        duration: "Feb 2023 – May 2023",
+        image: "/capgemini.png",
+        descriptions: [
+            "Optimized RESTful APIs in Java Spring Boot, reducing response times by 15%.",
+            "Documented data flow processes in Confluence and gained experience debugging production issues.",
+            "Developed responsive UI components using ReactJS and JavaScript, improving frontend performance."
+        ]
+    }
+],
+
 
   
     // ============ CONTACT ============
