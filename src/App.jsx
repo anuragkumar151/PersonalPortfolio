@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import NotFound from "./pages/404";
-import { createContext, useState, useEffect } from "react";
-import "preline/preline";
-
-export const AppContext = createContext();
+import { useState, useEffect } from "react";
+import { AppContext } from "./AppContext.jsx";
 
 function App() {
   // State to manage the theme (dark or light)

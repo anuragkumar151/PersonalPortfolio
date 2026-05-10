@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaJava,
   FaReact,
@@ -7,86 +6,121 @@ import {
   FaCss3Alt,
   FaJs,
   FaMicrosoft,
+  FaCogs,
 } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiMysql, SiPostman, SiGit } from "react-icons/si";
-import { FaCogs } from "react-icons/fa";
+import { useContext } from "react";
+import { AppContext } from "../../AppContext.jsx";
 
 function Skills() {
+  const { theme } = useContext(AppContext); // Access theme from context
+  const skills = [
+    {
+      name: "Java",
+      Icon: FaJava,
+      className: "text-yellow-600 dark:text-yellow-300",
+    },
+    {
+      name: "Spring Boot",
+      image: "/SpringBoot.png",
+      className: "text-green-600 dark:text-green-300",
+    },
+    {
+      name: "MySQL",
+      Icon: SiMysql,
+      className: "text-sky-600 dark:text-sky-300",
+    },
+    {
+      name: "MongoDB",
+      Icon: DiMongodb,
+      className: "text-green-600 dark:text-green-300",
+    },
+    {
+      name: "React",
+      Icon: FaReact,
+      className: "text-cyan-500 dark:text-cyan-300",
+    },
+    {
+      name: "JavaScript",
+      Icon: FaJs,
+      className: "text-yellow-500 dark:text-yellow-300",
+    },
+    {
+      name: "HTML",
+      Icon: FaHtml5,
+      className: "text-orange-600 dark:text-orange-300",
+    },
+    {
+      name: "CSS",
+      Icon: FaCss3Alt,
+      className: "text-blue-600 dark:text-blue-300",
+    },
+    {
+      name: "AWS",
+      Icon: FaAws,
+      className: "text-amber-500 dark:text-amber-300",
+    },
+    {
+      name: "Azure",
+      Icon: FaMicrosoft,
+      className: "text-blue-600 dark:text-blue-300",
+    },
+    {
+      name: "Git",
+      Icon: SiGit,
+      className: "text-red-600 dark:text-red-300",
+    },
+    {
+      name: "Postman",
+      Icon: SiPostman,
+      className: "text-orange-600 dark:text-orange-300",
+    },
+  ];
+
   return (
-    <section id="skills" className="mt-20 mx-4 lg:mx-20 pt-24">
-      {/* =========== SKILLS TITLE =========== */}
-      <h4 className="text-2xl font-semibold flex gap-2 items-center justify-center text-zinc-800 dark:text-white mb-6 transition-all duration-300">
-        <FaCogs className="text-3xl text-yellow-500 dark:text-yellow-300 transition-transform group-hover:scale-110" />
-        <span className="uppercase tracking-wider">Skillset</span>
-      </h4>
+    <section id="skills" className="skills-section mt-20 px-6 lg:px-24 pt-24">
+      <div className="skills-shell">
+      <div className="skills-header fade-up">
+        <h4
+          className={`text-4xl font-bold flex gap-3 items-center justify-center mb-12 ${
+            theme === "dark" ? "text-white" : "text-gray-900"
+          }`}
+        >
+          <FaCogs className="text-blue-800" />
+          SKILLSET
+        </h4>
+      </div>
 
-      {/* =========== SKILLS GRID =========== */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 mt-8">
-        {/* Skill Item */}
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-yellow-600 dark:text-yellow-400 transform hover:scale-110 transition-all duration-300">
-          <FaJava className="text-3xl" />
-          <span className="font-semibold text-sm">Java</span>
-        </span>
+        <div className="skills-grid">
+          {skills.map((skill, index) => {
+            const Icon = skill.Icon;
 
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-green-600 dark:text-green-400 transform hover:scale-110 transition-all duration-300">
-          <img
-            src="/SpringBoot.png"
-            alt="Spring Boot"
-            className="w-10 h-10 object-contain"
-          />
-          <span className="font-semibold text-sm">Spring Boot</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-purple-600 dark:text-purple-400 transform hover:scale-110 transition-all duration-300">
-          <SiMysql className="text-3xl" />
-          <span className="font-semibold text-sm">MySQL</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-green-600 dark:text-green-400 transform hover:scale-110 transition-all duration-300">
-          <DiMongodb className="text-3xl" />
-          <span className="font-semibold text-sm">MongoDB</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-blue-500 dark:text-blue-400 transform hover:scale-110 transition-all duration-300">
-          <FaReact className="text-3xl" />
-          <span className="font-semibold text-sm">React</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-yellow-500 dark:text-yellow-400 transform hover:scale-110 transition-all duration-300">
-          <FaJs className="text-3xl" />
-          <span className="font-semibold text-sm">JavaScript</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-orange-600 dark:text-orange-400 transform hover:scale-110 transition-all duration-300">
-          <FaHtml5 className="text-3xl" />
-          <span className="font-semibold text-sm">HTML</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-blue-600 dark:text-blue-400 transform hover:scale-110 transition-all duration-300">
-          <FaCss3Alt className="text-3xl" />
-          <span className="font-semibold text-sm">CSS</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-yellow-500 dark:text-yellow-400 transform hover:scale-110 transition-all duration-300">
-          <FaAws className="text-3xl" />
-          <span className="font-semibold text-sm">AWS</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-blue-600 dark:text-blue-400 transform hover:scale-110 transition-all duration-300">
-          <FaMicrosoft className="text-3xl" />
-          <span className="font-semibold text-sm">Azure</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-red-600 dark:text-red-400 transform hover:scale-110 transition-all duration-300">
-          <SiGit className="text-3xl" />
-          <span className="font-semibold text-sm">Git</span>
-        </span>
-
-        <span className="inline-flex flex-col items-center justify-center gap-1 py-2 px-3 rounded-lg text-orange-600 dark:text-orange-400 transform hover:scale-110 transition-all duration-300">
-          <SiPostman className="text-3xl" />
-          <span className="font-semibold text-sm">Postman</span>
-        </span>
+            return (
+              <span
+                key={skill.name}
+                title={skill.name}
+                className="skill-item fade-up"
+                style={{
+                  animationDelay: `${index * 65}ms`,
+                }}
+              >
+                <span className="skill-icon-wrap">
+                  {Icon ? (
+                    <Icon className={`skill-icon ${skill.className}`} />
+                  ) : (
+                    <img
+                      src={skill.image}
+                      alt={skill.name}
+                      className="skill-icon skill-image"
+                    />
+                  )}
+                </span>
+                <span className="skill-name">{skill.name}</span>
+              </span>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
